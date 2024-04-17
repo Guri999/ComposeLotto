@@ -1,4 +1,4 @@
-package com.example.composelotto.lottobox
+package com.example.composelotto.ui.lottobox
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

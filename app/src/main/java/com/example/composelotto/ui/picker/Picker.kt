@@ -1,4 +1,4 @@
-package com.example.composelotto.picker
+package com.example.composelotto.ui.picker
 
 import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi

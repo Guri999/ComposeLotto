@@ -37,8 +37,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.composelotto.R
-import com.example.composelotto.lottobox.LottoBox
-import com.example.composelotto.picker.Picker
+import com.example.composelotto.ui.lottobox.LottoBox
+import com.example.composelotto.ui.picker.Picker
 import com.example.composelotto.ui.theme.HoloBlueDark
 import kotlinx.coroutines.launch
 

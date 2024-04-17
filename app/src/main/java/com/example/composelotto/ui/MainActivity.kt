@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.composelotto.picker.Picker
+import com.example.composelotto.ui.picker.Picker
 import com.example.composelotto.ui.theme.ComposeLottoTheme
 
 class MainActivity : ComponentActivity() {

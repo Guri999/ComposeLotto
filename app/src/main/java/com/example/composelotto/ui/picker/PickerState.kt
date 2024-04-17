@@ -1,4 +1,4 @@
-package com.example.composelotto.picker
+package com.example.composelotto.ui.picker
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
