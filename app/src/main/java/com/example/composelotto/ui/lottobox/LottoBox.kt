@@ -25,8 +25,8 @@ import com.example.composelotto.ui.theme.LottoBoxColor
 fun LottoBox(
     selectedItems: List<String>
 ) {
-    fun getItem(index:Int) = selectedItems[index]
-    Row (
+    fun getItem(index: Int) = selectedItems[index]
+    LazyRow(
         modifier = Modifier
             .fillMaxWidth()
             .height(80.dp)
@@ -34,16 +34,10 @@ fun LottoBox(
             .background(LottoBoxColor),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
-    ){
-        LazyRow(
-            modifier = Modifier.padding(8.dp),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            items(selectedItems.size){ index ->
-                LottoBall(item = getItem(index).toInt())
-                Spacer(modifier = Modifier.size(8.dp))
-            }
+    ) {
+        items(selectedItems.size) { index ->
+            LottoBall(item = getItem(index).toInt())
+            Spacer(modifier = Modifier.size(8.dp))
         }
     }
 }

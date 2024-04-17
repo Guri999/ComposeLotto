@@ -1,6 +1,5 @@
 package com.example.composelotto.ui.picker
 
-import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
 import androidx.compose.foundation.layout.Box
@@ -8,21 +7,19 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.LocalContentColor
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
 import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Brush
@@ -44,7 +41,7 @@ fun Picker(
     items: List<String>,
     state: PickerState = rememberPickerState(),
     startIndex: Int = 0,
-    visibleItemCount: Int = 3,
+    visibleItemCount: Int = 5,
     textModifier: Modifier = Modifier,
     dividerColor: Color = LocalContentColor.current,
     content: @Composable (String) -> Unit
@@ -104,11 +101,11 @@ fun Picker(
 
             }
         }
-        Divider(
+        HorizontalDivider(
             color = dividerColor,
             modifier = Modifier.offset(y = itemHeightToDp * visibleItemsMiddle)
         )
-        Divider(
+        HorizontalDivider(
             color = dividerColor,
             modifier = Modifier.offset(y = itemHeightToDp * (visibleItemsMiddle + 1))
         )
